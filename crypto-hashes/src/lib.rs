@@ -4,6 +4,8 @@
 //!
 //! # Supported algorithms
 //! * [BLAKE2](https://en.wikipedia.org/wiki/BLAKE_(hash_function)#BLAKE2)
+//! * [GOST94](https://en.wikipedia.org/wiki/GOST_(hash_function))
+//!         (GOST R 34.11-94 and GOST 34.311-95)
 //! * [MD4](https://en.wikipedia.org/wiki/MD4)
 //! * [MD5](https://en.wikipedia.org/wiki/MD5) (not included)
 //! * [RIPEMD-160](https://en.wikipedia.org/wiki/RIPEMD)
@@ -34,12 +36,14 @@
 //! ```
 #![no_std]
 pub extern crate blake2;
+pub extern crate gost94;
 pub extern crate md4;
 //pub extern crate md5;
 pub extern crate ripemd160;
 //pub extern crate sha1;
 pub extern crate sha2;
 pub extern crate sha3;
+pub extern crate streebog;
 pub extern crate whirlpool;
 
 pub extern crate digest;
