@@ -36,10 +36,14 @@
 //! ```
 #![no_std]
 pub extern crate blake2;
+#[cfg(feature = "include_weak")]
 pub extern crate gost94;
+#[cfg(feature = "include_weak")]
 pub extern crate md4;
+//#[cfg(feature = "include_weak")]
 //pub extern crate md5;
 pub extern crate ripemd160;
+//#[cfg(feature = "include_weak")]
 //pub extern crate sha1;
 pub extern crate sha2;
 pub extern crate sha3;
