@@ -5,23 +5,27 @@
 //! # Supported algorithms
 //! * [BLAKE2](https://en.wikipedia.org/wiki/BLAKE_(hash_function)#BLAKE2)
 //! * [GOST94](https://en.wikipedia.org/wiki/GOST_(hash_function))
-//!         (GOST R 34.11-94 and GOST 34.311-95)
-//! * [MD4](https://en.wikipedia.org/wiki/MD4)
-//! * [MD5](https://en.wikipedia.org/wiki/MD5) (not included)
+//!         (GOST R 34.11-94 and GOST 34.311-95) [weak]
+//! * [MD4](https://en.wikipedia.org/wiki/MD2) [weak]
+//! * [MD4](https://en.wikipedia.org/wiki/MD4) [weak]
+//! * [MD5](https://en.wikipedia.org/wiki/MD5) [weak]
 //! * [RIPEMD-160](https://en.wikipedia.org/wiki/RIPEMD)
-//! * [SHA-1](https://en.wikipedia.org/wiki/SHA-1) (not included)
+//! * [SHA-1](https://en.wikipedia.org/wiki/SHA-1) [weak]
 //! * [SHA-2](https://en.wikipedia.org/wiki/SHA-2)
 //! * [SHA-3](https://en.wikipedia.org/wiki/SHA-3)
-//! * [Streebog](https://en.wikipedia.org/wiki/Streebog) (GOST R 34.11-2012)
+//! * [Streebog](https://en.wikipedia.org/wiki/Streebog) (GOST R 34.11-2012) [weak]
 //! * [Whirlpool](https://en.wikipedia.org/wiki/Whirlpool_(cryptography))
 //!
+//! Algorithms marked by [weak] are not included by default. To use them enable
+//! `include_weak` crate feature.
+//! 
 //! # Usage
 //!
 //! ```rust
 //! use crypto_hashes::digest::Digest;
 //!
 //! // create a SHA3-256 object
-//! let mut hasher = crypto_hashes::sha3::Sha3_256::new();
+//! let mut hasher = crypto_hashes::sha3::Sha3_256::default();
 //!
 //! // write input message
 //! hasher.input(b"abc");
@@ -38,15 +42,19 @@
 pub extern crate blake2;
 #[cfg(feature = "include_weak")]
 pub extern crate gost94;
+pub extern crate groestl;
+#[cfg(feature = "include_weak")]
+pub extern crate md2;
 #[cfg(feature = "include_weak")]
 pub extern crate md4;
-//#[cfg(feature = "include_weak")]
-//pub extern crate md5;
+#[cfg(feature = "include_weak")]
+pub extern crate md_5 as md5;
 pub extern crate ripemd160;
-//#[cfg(feature = "include_weak")]
-//pub extern crate sha1;
+#[cfg(feature = "include_weak")]
+pub extern crate sha_1 as sha1;
 pub extern crate sha2;
 pub extern crate sha3;
+#[cfg(feature = "include_weak")]
 pub extern crate streebog;
 pub extern crate whirlpool;
 
