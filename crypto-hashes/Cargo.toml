@@ -1,6 +1,6 @@
 [package]
 name = "crypto-hashes"
-version = "0.4.0"
+version = "0.7.0"
 authors = ["The Rust-Crypto Project Developers"]
 license = "MIT/Apache-2.0"
 description = "Meta crate for cryptographic hash functions written in pure Rust"
@@ -9,20 +9,20 @@ repository = "https://github.com/RustCrypto/meta"
 keywords = ["crypto", "meta", "hash", "digest"]
 
 [dependencies]
-blake2 = "0.5"
-gost94 = {version="0.3", optional=true}
-groestl = "0.2"
-md2 = {version="0.2", optional=true}
-md4 = {version="0.5", optional=true}
-md-5 = {version="0.4", optional=true}
-ripemd160 = "0.5"
-sha-1 = {version="0.3", optional=true}
-sha2 = "0.5"
-sha3 = "0.5"
-streebog = {version="0.4", optional=true}
-whirlpool = "0.5"
+blake2 = "0.7"
+gost94 = {version="0.7", optional=true}
+groestl = "0.7"
+md2 = {version="0.7", optional=true}
+md4 = {version="0.7", optional=true}
+md-5 = {version="0.7", optional=true}
+ripemd160 = "0.7"
+sha-1 = {version="0.7", optional=true}
+sha2 = "0.7"
+sha3 = "0.7"
+streebog = {version="0.7", optional=true}
+whirlpool = "0.7"
 
-digest = "0.5"
+digest = "0.7"
 
 [features]
 include_weak = ["gost94", "md2", "md4", "md-5", "sha-1", "streebog"]

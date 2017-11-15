@@ -18,14 +18,15 @@
 //!
 //! Algorithms marked by [weak] are not included by default. To use them enable
 //! `include_weak` crate feature.
-//! 
+//!
 //! # Usage
 //!
 //! ```rust
 //! use crypto_hashes::digest::Digest;
+//! use crypto_hashes::sha3::Sha3_256;
 //!
 //! // create a SHA3-256 object
-//! let mut hasher = crypto_hashes::sha3::Sha3_256::default();
+//! let mut hasher = Sha3_256::default();
 //!
 //! // write input message
 //! hasher.input(b"abc");
@@ -48,10 +49,10 @@ pub extern crate md2;
 #[cfg(feature = "include_weak")]
 pub extern crate md4;
 #[cfg(feature = "include_weak")]
-pub extern crate md_5 as md5;
+pub extern crate md5;
 pub extern crate ripemd160;
 #[cfg(feature = "include_weak")]
-pub extern crate sha_1 as sha1;
+pub extern crate sha1;
 pub extern crate sha2;
 pub extern crate sha3;
 #[cfg(feature = "include_weak")]
