@@ -29,10 +29,10 @@
 //! let mut hasher = Sha3_256::default();
 //!
 //! // write input message
-//! hasher.input(b"abc");
+//! hasher.update(b"abc");
 //!
 //! // read result (this will consume hasher)
-//! let out = hasher.result();
+//! let out = hasher.finalize();
 //!
 //! assert_eq!(out[..], [0x3a, 0x98, 0x5d, 0xa7, 0x4f, 0xe2, 0x25, 0xb2,
 //!                      0x04, 0x5c, 0x17, 0x2d, 0x6b, 0xd3, 0x90, 0xbd,
