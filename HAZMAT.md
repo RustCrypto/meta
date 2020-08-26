@@ -1,6 +1,6 @@
 # About "hazmat" crates ⚠️
 
-![hazmat](https://img.shields.io/badge/crypto-hazmat%E2%9A%A0-red)
+![hazmat](https://img.shields.io/badge/crypto-hazmat%E2%9A%A0-red.svg)
 
 Crates with a "hazmat" badge provide *low-level cryptographic functionality*
 which is difficult to use correctly and if used incorrectly will
