@@ -9,7 +9,7 @@
 //! * [MD4](https://en.wikipedia.org/wiki/MD2) [weak]
 //! * [MD4](https://en.wikipedia.org/wiki/MD4) [weak]
 //! * [MD5](https://en.wikipedia.org/wiki/MD5) [weak]
-//! * [RIPEMD-160](https://en.wikipedia.org/wiki/RIPEMD)
+//! * [RIPEMD](https://en.wikipedia.org/wiki/RIPEMD)
 //! * [SHA-1](https://en.wikipedia.org/wiki/SHA-1) [weak]
 //! * [SHA-2](https://en.wikipedia.org/wiki/SHA-2)
 //! * [SHA-3](https://en.wikipedia.org/wiki/SHA-3)
@@ -50,7 +50,7 @@ pub extern crate md2;
 pub extern crate md4;
 #[cfg(feature = "include_weak")]
 pub extern crate md5;
-pub extern crate ripemd160;
+pub extern crate ripemd;
 #[cfg(feature = "include_weak")]
 pub extern crate sha1;
 pub extern crate sha2;
