@@ -15,7 +15,7 @@ groestl = "0.10"
 md2 = { version = "0.10", optional = true }
 md4 = { version = "0.10", optional = true }
 md-5 = { version = "0.10", optional = true }
-ripemd160 = "0.7"
+ripemd = "0.1"
 sha-1 = { version = "0.10", optional = true }
 sha2 = "0.10"
 sha3 = "0.10"
