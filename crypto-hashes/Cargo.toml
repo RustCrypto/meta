@@ -1,9 +1,10 @@
 [package]
 name = "crypto-hashes"
-version = "0.10.0"
+version = "0.10.0" # Also update html_root_url in lib.rs when bumping this
+description = "Meta crate for cryptographic hash functions written in pure Rust"
 authors = ["RustCrypto Developers"]
 license = "MIT OR Apache-2.0"
-description = "Meta crate for cryptographic hash functions written in pure Rust"
+edition = "2018"
 documentation = "https://docs.rs/crypto-hashes"
 repository = "https://github.com/RustCrypto/meta"
 keywords = ["crypto", "meta", "hash", "digest"]

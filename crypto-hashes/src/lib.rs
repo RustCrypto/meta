@@ -40,23 +40,30 @@
 //!                      0x46, 0xbf, 0xe2, 0x45, 0x11, 0x43, 0x15, 0x32]);
 //! ```
 #![no_std]
-pub extern crate blake2;
-#[cfg(feature = "include_weak")]
-pub extern crate gost94;
-pub extern crate groestl;
-#[cfg(feature = "include_weak")]
-pub extern crate md2;
-#[cfg(feature = "include_weak")]
-pub extern crate md4;
-#[cfg(feature = "include_weak")]
-pub extern crate md5;
-pub extern crate ripemd;
-#[cfg(feature = "include_weak")]
-pub extern crate sha1;
-pub extern crate sha2;
-pub extern crate sha3;
-#[cfg(feature = "include_weak")]
-pub extern crate streebog;
-pub extern crate whirlpool;
+#![doc(
+    html_logo_url = "https://raw.githubusercontent.com/RustCrypto/media/6ee8e381/logo.svg",
+    html_favicon_url = "https://raw.githubusercontent.com/RustCrypto/media/6ee8e381/logo.svg",
+    html_root_url = "https://docs.rs/crypto-hashes/0.10.0"
+)]
+#![warn(missing_docs, rust_2018_idioms)]
 
-pub extern crate digest;
+pub use blake2;
+#[cfg(feature = "include_weak")]
+pub use gost94;
+pub use groestl;
+#[cfg(feature = "include_weak")]
+pub use md2;
+#[cfg(feature = "include_weak")]
+pub use md4;
+#[cfg(feature = "include_weak")]
+pub use md5;
+pub use ripemd;
+#[cfg(feature = "include_weak")]
+pub use sha1;
+pub use sha2;
+pub use sha3;
+#[cfg(feature = "include_weak")]
+pub use streebog;
+pub use whirlpool;
+
+pub use digest;
