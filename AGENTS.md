@@ -129,7 +129,7 @@ algorithms, modes, or unrelated vulnerabilities.
 work-in-progress policy and compiler discussion:**
 
 - [RustCrypto/meta#38: zeroization policy for stack temporaries](https://github.com/RustCrypto/meta/issues/38)
-- [Function-boundary zeroization discussion](https://internals.rust-lang.org/t/pre-pre-rfc-zeroize-on-return-for-function-boundary-zeroization/24796/5) - a RustCrypto maintainer-driven proposal to solve the stack zeroization problem using compiler/codegen-aware facilities
+- [Function-boundary zeroization discussion](https://internals.rust-lang.org/t/pre-pre-rfc-zeroize-on-return-for-function-boundary-zeroization/24796/) - a RustCrypto maintainer-driven proposal to solve the stack zeroization problem using compiler/codegen-aware facilities
 
 RustCrypto deliberately does **not** explicitly zeroize every temporary on the
 stack. Adding wipes everywhere is expensive (especially in e.g. loops where the
